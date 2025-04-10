@@ -1,33 +1,91 @@
-.experience-card {
-    background-color: #1d1532;
-    border-radius: 1rem;
-    color: white;
-    box-shadow: 0 0 20px rgba(162, 89, 255, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  
-    .icon {
-      font-size: 2rem;
+// 🎨 Couleurs principales
+$primary: #a259ff;
+$text: #eae6f5;
+$card: #1d1532;
+
+:host {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.card-container {
+  background: linear-gradient(145deg, #1d1532, #23193c);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: 0 0 60px rgba($primary, 0.25);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  height: 100%;
+
+  &:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 80px rgba($primary, 0.5);
+  }
+
+  img {
+    width: 70px;
+    height: auto;
+    filter: drop-shadow(0 0 12px rgba($primary, 0.4));
+    flex-shrink: 0;
+  }
+
+  .card-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: white;
     }
-  
-    .title {
-      font-size: 1.2rem;
-      color: #a259ff;
-      font-weight: bold;
+
+    p {
+      font-size: 0.95rem;
+      color: lighten($text, 10%);
+      margin: 0;
     }
-  
-    .subtitle {
-      font-size: 1rem;
-      color: #ccc;
-    }
-  
-    button {
-      border-radius: 999px;
-      padding: 0.4rem 1.5rem;
-    }
-  
-    &:hover {
-      transform: scale(1.02);
-      box-shadow: 0 0 30px rgba(162, 89, 255, 0.4);
+
+    .btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.5rem 1.2rem;
+      border-radius: 1rem;
+      background-color: $primary;
+      color: white;
+      font-weight: 500;
+      font-size: 0.85rem;
+      border: none;
+      cursor: pointer;
+      align-self: flex-start;
+
+      &:hover {
+        background-color: darken($primary, 10%);
+      }
     }
   }
-  
+}
+
+// ✅ Responsive pour mobile
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .card-content {
+    align-items: center;
+
+    .btn {
+      align-self: center;
+    }
+  }
+}
