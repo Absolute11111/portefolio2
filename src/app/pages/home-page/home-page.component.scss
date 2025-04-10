@@ -1,124 +1,131 @@
-// Palette Figma
+// home-page.component.scss
+
+// 🎨 Couleurs principales
 $primary: #a259ff;
 $background: #0f0c1a;
 $text: #eae6f5;
 $card: #1d1532;
 
-.home-page {
+:host {
+  display: block;
   background-color: $background;
   color: $text;
   font-family: 'Poppins', sans-serif;
-  padding: 2rem 1rem;
+  padding: 0;
+  margin: 0;
+}
 
-  .hero {
-    text-align: center;
-    padding: 4rem 2rem;
-    position: relative;
+// ✅ SECTION HERO
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 4rem 2rem;
+  background-image: url('/assets/Gradient-1.png');
+  background-repeat: no-repeat;
+  background-position: center top;
 
-    .bitmoji {
-      max-width: 200px;
-      margin: 0 auto 2rem;
-      display: block;
-    }
+  .title-top {
+    font-size: 0.9rem;
+    color: lighten($text, 30%);
+    margin-bottom: 0.5rem;
+  }
 
-    .greeting {
-      font-size: 0.9rem;
-      color: lighten($text, 20%);
-    }
+  .main-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
 
-    .title {
-      font-size: 2.2rem;
-      font-weight: 600;
-      margin: 1rem 0;
-      color: white;
-      span {
-        color: $primary;
-        font-weight: bold;
-      }
-    }
-
-    .subtitle {
-      font-size: 1.2rem;
+    span {
       color: $primary;
-      font-weight: 500;
-    }
-
-    .company {
-      color: lighten($primary, 20%);
-      font-weight: bold;
-      text-decoration: underline;
-    }
-
-    .description {
-      max-width: 600px;
-      margin: 2rem auto 0;
-      font-size: 1rem;
-      line-height: 1.6;
-      color: $text;
+      text-decoration: underline wavy $primary;
     }
   }
 
-  .experience-section {
-    text-align: center;
-    margin-top: 5rem;
+  .subtitle {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    color: $primary;
+  }
 
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 3rem;
-      color: white;
+  .tagline {
+    font-size: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+    color: lighten($text, 10%);
+  }
+
+  .avatar {
+    max-width: 180px;
+    margin-bottom: 1rem;
+    filter: drop-shadow(0 0 20px rgba($primary, 0.4));
+  }
+}
+
+// ✅ SECTION EXPÉRIENCES
+.experiences {
+  padding: 4rem 2rem;
+
+  .section-title {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+
+  .experience-card {
+    background-color: $card;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 0 20px rgba($primary, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 25px rgba($primary, 0.5);
     }
 
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-      justify-content: center;
+    img {
+      width: 50px;
+      margin-bottom: 1rem;
+    }
 
-      .card {
-        background-color: $card;
-        border-radius: 1.5rem;
-        padding: 2rem;
-        text-align: left;
-        box-shadow: 0 0 25px rgba($primary, 0.2);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    h3 {
+      color: $primary;
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+    }
 
-        &:hover {
-          transform: scale(1.05);
-          box-shadow: 0 0 40px rgba($primary, 0.4);
-        }
+    p {
+      font-size: 0.9rem;
+      color: lighten($text, 10%);
+    }
 
-        img {
-          width: 50px;
-          margin-bottom: 1rem;
-        }
+    .btn {
+      margin-top: 1rem;
+      padding: 0.6rem 1.2rem;
+      border-radius: 0.8rem;
+      background-color: $primary;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s ease;
 
-        h3 {
-          color: $primary;
-          font-size: 1.2rem;
-          margin-bottom: 0.5rem;
-        }
-
-        p {
-          font-size: 0.9rem;
-          color: lighten($text, 20%);
-        }
-
-        .learn-more {
-          display: inline-block;
-          margin-top: 1rem;
-          padding: 0.5rem 1.2rem;
-          border: 1px solid $primary;
-          border-radius: 0.75rem;
-          color: $primary;
-          background: transparent;
-          transition: background 0.3s ease, color 0.3s ease;
-
-          &:hover {
-            background: $primary;
-            color: white;
-          }
-        }
+      &:hover {
+        background-color: darken($primary, 10%);
       }
     }
   }
+}
+
+// ✅ TRANSITION GLOBALE
+* {
+  transition: all 0.3s ease;
 }

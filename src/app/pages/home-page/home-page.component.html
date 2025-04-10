@@ -1,48 +1,81 @@
 <!-- home-page.component.html -->
+
 <section class="hero">
-    <div class="intro-text">
-      <p class="bonjour">Bonjour, je suis <span>Sebastian Bouquet</span></p>
-      <h1 class="designer">A Designer who<br />
-        <strong>Jugez mes connaissances<br />par un <span class="book">book</span></strong>
-      </h1>
-      <p class="subtitle">Je suis developpeur <span class="fullstack">fullStack</span></p>
-      <p class="alternance">Actuellement je suis en alternance chez <a href="#">SQLI</a></p>
-      <p class="desc">Ayant quelques connaissances en maquettes et de back-end / front-end comme Java et Angular, je cherche à me démarquer par un travail acharné</p>
-    </div>
-    <div class="hero-img">
-      <img src="assets/bitmoji.png" alt="Bitmoji Sebastian">
+    <img src="assets/laptop-wave.png" alt="Bitmoji Sebastian" class="bitmoji" />
+    <p class="hello">Bonjour, je suis Sebastian Bouquet</p>
+  
+    <h1 class="headline">
+      A Designer who<br />
+      <span>Jugez mes connaissances</span><br />
+      par un <span class="highlighted">book</span>
+    </h1>
+  
+    <p class="subtitle">Je suis développeur <span class="highlighted">fullStack</span></p>
+    <p class="alt-text">
+      Actuellement je suis en alternance chez
+      <a href="https://www.sqli.com" target="_blank" rel="noopener">SQLI</a>
+    </p>
+    <p class="description">
+      Ayant quelques connaissances en maquettes et de back-end / front-end comme Java et Angular, je cherche à me démarquer par un travail acharné
+    </p>
+  </section>
+  
+  <section class="experience-section">
+    <h2>Expérience professionnel</h2>
+  
+    <div class="experience-cards">
+      <app-experience-card
+        title="Developpeur Stagiaire SQLI"
+        description="Stage intensif en Angular et Java."
+        icon="assets/group-2.png">
+      </app-experience-card>
+  
+      <app-experience-card
+        title="Anciennement Stagiaire chez Foncia"
+        description="Intégration HTML/CSS et conception de modules"
+        icon="assets/groupe-1895.png">
+      </app-experience-card>
+  
+      <app-experience-card
+        title="Developpeur Alternant SQLI"
+        description="Fullstack Angular/SpringBoot"
+        icon="assets/group-1938.png">
+      </app-experience-card>
+  
+      <app-experience-card
+        title="Stagiaire chez Loft One"
+        description="Stage sur l’utilisation de WordPress"
+        icon="assets/Icons.png">
+      </app-experience-card>
     </div>
   </section>
   
-  <section class="experience">
-    <h2 class="section-title">Experience professionnel</h2>
-    <div class="cards">
-      <div class="card">
-        <img src="assets/icons/icon1.svg" alt="icon1">
-        <h3>Developpeur Stagiaire SQLI</h3>
-        <p>Stage intensif en Angular et Java.</p>
-        <button>Learn more</button>
-      </div>
-      <div class="card">
-        <img src="assets/icons/icon2.svg" alt="icon2">
-        <h3>Anciennement Stagiaire chez Foncia</h3>
-        <p>Intégration HTML/CSS et conception de modules</p>
-        <button>Learn more</button>
-      </div>
-      <div class="card">
-        <img src="assets/icons/icon3.svg" alt="icon3">
-        <h3>Developpeur Alternant SQLI</h3>
-        <p>Fullstack Angular/SpringBoot</p>
-        <button>Learn more</button>
-      </div>
-      <div class="card">
-        <img src="assets/icons/icon4.svg" alt="icon4">
-        <h3>Stagiaire chez Loft One</h3>
-        <p>Stage sur l’utilisation de WordPress</p>
-        <button>Learn more</button>
-      </div>
-    </div>
+  <section class="project-section">
+    <h3>Projet en cours</h3>
+    <h2>Exemple de projet</h2>
+    <p class="project-text">
+      Voici un petit site que j’ai réalisé en tant qu’indépendant pour des amis ce n’est qu’un one page basique mais cela reste une petite image de mon niveau en front-end
+    </p>
+    <img src="assets/Portfolio-1.png" alt="Projet portfolio 1" class="project-img" />
   </section>
   
-  <!-- D'autres sections viendront ensuite -->
+  <section class="project-section">
+    <h2>Autre projet</h2>
+    <h2>exemple de Projet</h2>
+    <p class="project-text">
+      Projet de jeu en python MMORPG, path of the loner, un petit jeu ROGUE like permettant ou un aventurier de faire une partie one shot qui cumule xp / gold etc.
+    </p>
+    <img src="assets/Portfolio-2.png" alt="Projet portfolio 2" class="project-img" />
+  </section>
+  
+  <section class="tech-section">
+    <p class="tech-intro">
+      Actuellement je serai à la recherche de nouvelle opportunités afin de diversifier mes connaissances, expériences. Soif de connaissance, je suis disposé à tenter de nouvelle technologie
+    </p>
+    <app-tech-icons></app-tech-icons>
+  </section>
+  
+  <section class="contact-section">
+    <app-contact-form></app-contact-form>
+  </section>
   

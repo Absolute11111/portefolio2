@@ -1,18 +1,31 @@
 .custom-navbar {
-    background-color: transparent;
-    padding: 1rem 2rem;
-    font-weight: 500;
-  
+  background-color: #0c0914; // fond violet très foncé (identique à la maquette)
+  padding: 1.5rem 2rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .logo {
+    width: 40px;
+    height: auto;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+
     .nav-link {
       color: #eae6f5 !important;
       font-size: 1.1rem;
       position: relative;
+      text-decoration: none;
       transition: color 0.3s ease;
-  
+
       &.active,
       &:hover {
         color: #a259ff !important;
       }
     }
   }
-  
+}

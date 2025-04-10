@@ -1,7 +1,5 @@
-<div class="experience-card p-4">
-    <div class="icon mb-3">{{ data.icon }}</div>
-    <h3 class="title">{{ data.title }}</h3>
-    <p class="subtitle">{{ data.subtitle }}</p>
-    <button class="btn btn-outline-light mt-3">Learn more</button>
-  </div>
-  
+<div class="experience-card">
+  <img [src]="icon" alt="icon experience" />
+  <h3>{{ title }}</h3>
+  <p>{{ description }}</p>
+</div>

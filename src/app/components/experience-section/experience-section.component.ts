@@ -3,33 +3,33 @@ import { CommonModule } from '@angular/common';
 import { ExperienceCardComponent } from '../experience-card/experience-card.component';
 
 @Component({
-  standalone: true,
   selector: 'app-experience-section',
+  standalone: true,
+  imports: [CommonModule, ExperienceCardComponent],
   templateUrl: './experience-section.component.html',
-  styleUrls: ['./experience-section.component.scss'],
-  imports: [CommonModule, ExperienceCardComponent] // ✅ importer le composant enfant
+  styleUrls: ['./experience-section.component.scss']
 })
 export class ExperienceSectionComponent {
   experiences = [
     {
+      icon: 'assets/group-2.png',
       title: 'Développeur Stagiaire SQLI',
-      subtitle: 'Stage d’initiation en agence',
-      icon: '🌟'
+      description: 'Stage intensif en Angular et Java.'
     },
     {
-      title: 'Anciennement Stagiaire chez Foncia',
-      subtitle: 'Refonte d’outils immobiliers',
-      icon: '🌕'
+      icon: 'assets/group-1935.png',
+      title: 'Stagiaire chez Foncia',
+      description: 'Intégration HTML/CSS et modules'
     },
     {
+      icon: 'assets/group-1938.png',
       title: 'Développeur Alternant SQLI',
-      subtitle: 'Fullstack en mission client',
-      icon: '🪐'
+      description: 'Fullstack Angular/SpringBoot'
     },
     {
-      title: 'Stagiaire chez Loft One',
-      subtitle: 'Projet web en autonomie',
-      icon: '🚀'
+      icon: 'assets/icons.png',
+      title: 'Stagiaire Loft One',
+      description: 'Création site vitrine sous WordPress'
     }
   ];
 }

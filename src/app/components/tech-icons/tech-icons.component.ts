@@ -1,21 +1,21 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
-  standalone: true,
   selector: 'app-tech-icons',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './tech-icons.component.html',
-  styleUrl: './tech-icons.component.scss'
+  styleUrls: ['./tech-icons.component.scss']
 })
 export class TechIconsComponent {
   icons = [
-    'assets/icons/angular.svg',
-    'assets/icons/java.svg',
-    'assets/icons/spring.svg',
-    'assets/icons/typescript.svg',
-    'assets/icons/docker.svg',
-    'assets/icons/html.svg',
+    'assets/Icons/angular.svg',
+    'assets/Icons/spring.svg',
+    'assets/Icons/github.svg',
+    'assets/Icons/html.svg',
+    'assets/Icons/css.svg',
+    'assets/Icons/js.svg',
+    'assets/Icons/java.svg'
   ];
-  
-
 }
