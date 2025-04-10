@@ -1,0 +1,30 @@
+.footer-section {
+    padding: 2rem;
+    background-color: transparent;
+    color: #ccc;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+  
+      a img {
+        width: 24px;
+        filter: brightness(0) saturate(100%) invert(86%) sepia(8%) saturate(332%) hue-rotate(193deg) brightness(88%) contrast(85%);
+        transition: transform 0.2s ease, filter 0.3s ease;
+  
+        &:hover {
+          transform: scale(1.2);
+          filter: drop-shadow(0 0 6px #a259ff);
+        }
+      }
+    }
+  
+    .signature {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: #777;
+    }
+  }
+  

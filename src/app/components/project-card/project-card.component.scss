@@ -1,0 +1,23 @@
+.project-card {
+    background-color: #1d1532;
+    border-radius: 1rem;
+    color: white;
+    box-shadow: 0 0 20px rgba(162, 89, 255, 0.2);
+    transition: transform 0.3s ease;
+  
+    img {
+      border-radius: 1rem;
+      max-height: 200px;
+      object-fit: cover;
+    }
+  
+    .project-title {
+      color: #a259ff;
+      margin-top: 0.5rem;
+    }
+  
+    &:hover {
+      transform: scale(1.03);
+    }
+  }
+  

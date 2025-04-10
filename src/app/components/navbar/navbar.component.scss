@@ -1,0 +1,18 @@
+.custom-navbar {
+    background-color: transparent;
+    padding: 1rem 2rem;
+    font-weight: 500;
+  
+    .nav-link {
+      color: #eae6f5 !important;
+      font-size: 1.1rem;
+      position: relative;
+      transition: color 0.3s ease;
+  
+      &.active,
+      &:hover {
+        color: #a259ff !important;
+      }
+    }
+  }
+  

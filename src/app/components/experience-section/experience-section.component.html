@@ -1,0 +1,10 @@
+<section class="experience-section container">
+    <h2 class="section-title text-center">Experience professionnel</h2>
+  
+    <div class="row gx-4 gy-4 mt-4">
+      <div class="col-md-6" *ngFor="let exp of experiences">
+        <app-experience-card [data]="exp"></app-experience-card>
+      </div>
+    </div>
+  </section>
+  

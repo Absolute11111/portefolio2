@@ -1,0 +1,124 @@
+// Palette Figma
+$primary: #a259ff;
+$background: #0f0c1a;
+$text: #eae6f5;
+$card: #1d1532;
+
+.home-page {
+  background-color: $background;
+  color: $text;
+  font-family: 'Poppins', sans-serif;
+  padding: 2rem 1rem;
+
+  .hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    position: relative;
+
+    .bitmoji {
+      max-width: 200px;
+      margin: 0 auto 2rem;
+      display: block;
+    }
+
+    .greeting {
+      font-size: 0.9rem;
+      color: lighten($text, 20%);
+    }
+
+    .title {
+      font-size: 2.2rem;
+      font-weight: 600;
+      margin: 1rem 0;
+      color: white;
+      span {
+        color: $primary;
+        font-weight: bold;
+      }
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      color: $primary;
+      font-weight: 500;
+    }
+
+    .company {
+      color: lighten($primary, 20%);
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    .description {
+      max-width: 600px;
+      margin: 2rem auto 0;
+      font-size: 1rem;
+      line-height: 1.6;
+      color: $text;
+    }
+  }
+
+  .experience-section {
+    text-align: center;
+    margin-top: 5rem;
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 3rem;
+      color: white;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      justify-content: center;
+
+      .card {
+        background-color: $card;
+        border-radius: 1.5rem;
+        padding: 2rem;
+        text-align: left;
+        box-shadow: 0 0 25px rgba($primary, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+          transform: scale(1.05);
+          box-shadow: 0 0 40px rgba($primary, 0.4);
+        }
+
+        img {
+          width: 50px;
+          margin-bottom: 1rem;
+        }
+
+        h3 {
+          color: $primary;
+          font-size: 1.2rem;
+          margin-bottom: 0.5rem;
+        }
+
+        p {
+          font-size: 0.9rem;
+          color: lighten($text, 20%);
+        }
+
+        .learn-more {
+          display: inline-block;
+          margin-top: 1rem;
+          padding: 0.5rem 1.2rem;
+          border: 1px solid $primary;
+          border-radius: 0.75rem;
+          color: $primary;
+          background: transparent;
+          transition: background 0.3s ease, color 0.3s ease;
+
+          &:hover {
+            background: $primary;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}

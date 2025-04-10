@@ -1,0 +1,61 @@
+.hero-section {
+    padding: 6rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+  
+    .intro-text {
+      max-width: 800px;
+  
+      .hello {
+        font-size: 1.2rem;
+        color: #ccc;
+      }
+  
+      .highlight {
+        color: #a259ff;
+        font-weight: bold;
+      }
+  
+      .subtitle {
+        font-size: 1rem;
+        margin-top: 1rem;
+        color: #ccc;
+      }
+  
+      .headline {
+        font-size: 2.8rem;
+        font-weight: bold;
+        margin: 1rem 0;
+  
+        .book {
+          color: #a259ff;
+          border-bottom: 2px dashed #a259ff;
+          padding: 0 5px;
+        }
+      }
+  
+      .role {
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+      }
+  
+      .description {
+        font-size: 1rem;
+        color: #ccc;
+        line-height: 1.6;
+      }
+    }
+  
+    .avatar-wrapper {
+      margin-top: 3rem;
+  
+      .avatar {
+        width: 180px;
+        border-radius: 50%;
+        box-shadow: 0 0 30px rgba(162, 89, 255, 0.6);
+      }
+    }
+  }
+  

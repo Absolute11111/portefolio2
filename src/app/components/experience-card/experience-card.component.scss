@@ -1,0 +1,33 @@
+.experience-card {
+    background-color: #1d1532;
+    border-radius: 1rem;
+    color: white;
+    box-shadow: 0 0 20px rgba(162, 89, 255, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+    .icon {
+      font-size: 2rem;
+    }
+  
+    .title {
+      font-size: 1.2rem;
+      color: #a259ff;
+      font-weight: bold;
+    }
+  
+    .subtitle {
+      font-size: 1rem;
+      color: #ccc;
+    }
+  
+    button {
+      border-radius: 999px;
+      padding: 0.4rem 1.5rem;
+    }
+  
+    &:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 30px rgba(162, 89, 255, 0.4);
+    }
+  }
+  
