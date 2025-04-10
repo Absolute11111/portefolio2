@@ -10,12 +10,11 @@ import { CommonModule } from '@angular/common';
 })
 export class TechIconsComponent {
   icons = [
-    'assets/Icons/angular.svg',
-    'assets/Icons/spring.svg',
-    'assets/Icons/github.svg',
-    'assets/Icons/html.svg',
-    'assets/Icons/css.svg',
-    'assets/Icons/js.svg',
-    'assets/Icons/java.svg'
+    'assets/Angular.png',
+    'assets/github.png',
+    'assets/html.png',
+    'assets/css.png',
+    'assets/Typescript.png',
+    'assets/java.png'
   ];
 }

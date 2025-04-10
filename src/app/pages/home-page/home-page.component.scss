@@ -2,7 +2,6 @@
 $primary: #a259ff;
 $background: #0f0c1a;
 $text: #eae6f5;
-$card: #1d1532;
 
 :host {
   display: block;
@@ -13,10 +12,9 @@ $card: #1d1532;
   margin: 0;
 }
 
-// ✅ SECTION HERO
+// ✅ HERO
 .hero {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 4rem;
@@ -38,14 +36,12 @@ $card: #1d1532;
     .title-top {
       font-size: 0.9rem;
       color: lighten($text, 30%);
-      margin-bottom: 0.5rem;
     }
 
     .main-title {
       font-size: 2.8rem;
       font-weight: 600;
       color: white;
-      line-height: 1.2;
 
       span.highlighted {
         color: $primary;
@@ -60,13 +56,7 @@ $card: #1d1532;
       color: $primary;
     }
 
-    .alt-text {
-      margin-top: 0.5rem;
-      font-size: 1rem;
-      color: lighten($text, 10%);
-    }
-
-    .description {
+    .alt-text, .description {
       margin-top: 1.2rem;
       font-size: 1rem;
       color: lighten($text, 10%);
@@ -74,16 +64,16 @@ $card: #1d1532;
   }
 }
 
-// ✅ SECTION EXPÉRIENCES
-.experiences {
+// ✅ EXPÉRIENCES
+.experience-section {
   padding: 6rem 2rem;
   max-width: 1080px;
   margin: 0 auto;
 
   .section-title {
+    text-align: center;
     font-size: 2rem;
     color: white;
-    text-align: center;
     margin-bottom: 3rem;
     font-weight: 600;
   }
@@ -93,17 +83,37 @@ $card: #1d1532;
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
-    max-width: 1000px;
-    margin: 0 auto;
 
     app-experience-card {
-      flex: 1 1 45%;
+      flex: 0 1 460px;
       max-width: 460px;
     }
   }
 }
 
-// ✅ SECTION AUTRES PROJETS
+// ✅ RESPONSIVE
+@media (max-width: 768px) {
+  .experience-cards {
+    flex-direction: column;
+    align-items: center;
+
+    app-experience-card {
+      width: 100%;
+      max-width: 90%;
+    }
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+
+    .hero-text {
+      text-align: center;
+    }
+  }
+}
+
+// ✅ PROJECT SECTION
 .project-section {
   display: flex;
   align-items: center;
@@ -174,35 +184,32 @@ $card: #1d1532;
       margin-bottom: 2rem;
     }
   }
-}
-
-// ✅ TRANSITION GLOBALE
-* {
-  transition: all 0.3s ease;
-}
-
-// ✅ RESPONSIVE
-@media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .tech-intro {
+    max-width: 960px;
+    margin: 4rem auto 3rem;
+    padding: 1.5rem 2rem;
     text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: lighten($text, 8%);
+    border-radius: 1.2rem;
+    background: linear-gradient(90deg, rgba(255,255,255,0.035), rgba(255,255,255,0.01));
+    box-shadow: 0 0 20px rgba($primary, 0.25);
+    animation: fadeInUp 1.2s ease forwards;
+    opacity: 0;
+  }
+  
 
-    .hero-text {
-      text-align: center;
-    }
-
-    .avatar {
-      width: 160px;
-    }
   }
 
-  .experience-cards {
-    flex-direction: column;
-    align-items: center;
-
-    app-experience-card {
-      width: 100%;
-      max-width: 90%;
-    }
-  }
-}
