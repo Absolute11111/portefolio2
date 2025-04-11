@@ -195,21 +195,35 @@ $text: #eae6f5;
     }
   }
   
-  .tech-intro {
-    max-width: 960px;
-    margin: 4rem auto 3rem;
-    padding: 1.5rem 2rem;
+ // ✅ TECH INTRO RELOOKÉ
+
+
+
+  }
+  .tech-intro-section {
     text-align: center;
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: lighten($text, 8%);
-    border-radius: 1.2rem;
-    background: linear-gradient(90deg, rgba(255,255,255,0.035), rgba(255,255,255,0.01));
-    box-shadow: 0 0 20px rgba($primary, 0.25);
-    animation: fadeInUp 1.2s ease forwards;
-    opacity: 0;
-  }
+    max-width: 980px;
+    margin: 5rem auto 3rem;
+    padding: 0 2rem;
   
-
+    .tech-intro-text {
+      font-size: 1.3rem;
+      line-height: 1.8;
+      color: $text;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 400;
+  
+      .highlight {
+        color: $primary;
+        font-weight: 600;
+        font-size: 1.35rem;
+      }
+    }
+  
+    .app-tech-icons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
   }
-

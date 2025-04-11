@@ -1,16 +1,8 @@
-<div class="contact-section container text-center">
-    <h2 class="section-title">Contact</h2>
-    <p class="mb-4">
-      Je cherche actuellement une entreprise ESN basée sur Toulouse, afin d’exercer en tant qu’alternant en Master 1 chef de projet.
-    </p>
-  
-    <form>
-      <input type="text" class="form-control mb-3" placeholder="Nom" />
-      <input type="email" class="form-control mb-3" placeholder="Email" />
-      <textarea rows="4" class="form-control mb-3" placeholder="Message"></textarea>
-      <button class="btn btn-primary">Envoyer</button>
-    </form>
-  
-    <p class="mt-4 small">©2025 Bouquet Sebastian</p>
-  </div>
-  
+<form (ngSubmit)="sendEmail()" #contactForm="ngForm">
+  <input type="text" name="honeypot" [(ngModel)]="formData.honeypot" style="display: none;" tabindex="-1" autocomplete="off" />
+
+  <input type="text" name="name" [(ngModel)]="formData.name" required placeholder="Nom" />
+  <input type="email" name="email" [(ngModel)]="formData.email" required placeholder="Email" />
+  <textarea name="message" [(ngModel)]="formData.message" required placeholder="Votre message"></textarea>
+  <button type="submit">Envoyer</button>
+</form>
