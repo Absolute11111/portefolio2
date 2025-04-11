@@ -205,17 +205,24 @@ $text: #eae6f5;
   }
 
   .project-section {
-    flex-direction: column;
+    flex-direction: column !important;
+    align-items: center;
+    padding: 2rem 1rem;
 
     .project-text,
     .project-img {
-      margin: 0 auto;
+      margin: 1rem auto !important;
+      max-width: 100%;
       text-align: center;
     }
 
     .project-text {
       font-size: 0.95rem;
-      margin-bottom: 2rem;
+      padding: 1rem;
+    }
+
+    .project-img {
+      width: 100%;
     }
   }
 
