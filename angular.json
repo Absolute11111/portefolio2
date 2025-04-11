@@ -31,8 +31,8 @@
             ],
             "styles": [
               "src/styles.scss",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              { "href": "https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" }
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+            
             ],
             "scripts": [],
             "server": "src/main.server.ts",
@@ -96,7 +96,7 @@
             "styles": [
               "src/styles.scss",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              { "href": "https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" }
+              
             ],
             "scripts": []
           }
