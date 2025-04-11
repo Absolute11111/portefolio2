@@ -1,4 +1,5 @@
 <!-- home-page.component.html -->
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <section class="hero">
   <img src="assets/laptop-wave.png" alt="Bitmoji Sebastian" class="avatar" />
@@ -7,44 +8,44 @@
     <h1 class="main-title">
       Je vous invite à
       apprendre à me connaître à travers<br />
-      mon <span class="highlighted">portefolio</span>
+      mon <span class="highlighted">portfolio</span>
     </h1>
-    <p class="subtitle">Je suis développeur fullStack</p>
+    <p class="subtitle">Je suis développeur full stack</p>
     <p class="alt-text">
-      Actuellement je suis en alternance chez
-      <a href="https://www.sqli.com" target="_blank" rel="noopener">SQLI</a>
+      Actuellement, je suis en alternance chez
+      <a class="purpleSqli" href="https://www.sqli.com" target="_blank" rel="noopener">SQLI</a>
     </p>
     <p class="description">
-      Ayant quelques connaissances en maquettes et de back-end / front-end comme Java et Angular,
-      je cherche à me démarquer par un travail acharné
+      Ayant des connaissances en maquettage et en développement back-end/front-end (Java et Angular),
+      je cherche à me démarquer par un travail rigoureux et passionné.
     </p>
   </div>
 </section>
 
 <section class="experience-section">
-  <h2 class="section-title">Expérience professionnel</h2>
+  <h2 class="section-title">Expériences professionnelles</h2>
   <div class="experience-cards">
     <app-experience-card
-      title="Developpeur Stagiaire SQLI"
+      title="Développeur Stagiaire chez SQLI"
       description="Stage intensif en Angular et Java."
       icon="assets/SQLI.png">
     </app-experience-card>
 
     <app-experience-card
-      title="Anciennement Stagiaire chez Foncia"
-      description="Intégration HTML/CSS et conception de modules"
+      title="Stagiaire chez Foncia"
+      description="Intégration HTML/CSS et conception de modules."
       icon="assets/Logo_Foncia.png">
     </app-experience-card>
 
     <app-experience-card
-      title="Developpeur Alternant SQLI"
-      description="Fullstack Angular/SpringBoot"
+      title="Développeur Alternant chez SQLI"
+      description="Développement full stack Angular/Spring Boot."
       icon="assets/SQLI.png">
     </app-experience-card>
 
     <app-experience-card
       title="Stagiaire chez Loft One"
-      description="Stage sur l’utilisation de WordPress"
+      description="Stage sur l’utilisation de WordPress."
       icon="assets/logo_loftone.jpg">
     </app-experience-card>
   </div>
@@ -54,34 +55,31 @@
   <h3>Projet en cours</h3>
   <h2>Exemple de projet</h2>
   <p class="project-text">
-    Voici un petit site que j’ai réalisé en tant qu’indépendant pour des amis ce n’est qu’un one page
-    basique mais cela reste une petite image de mon niveau en front-end
+    Voici un petit site que j’ai réalisé en tant qu’indépendant pour des amis. Ce n’est qu’une one-page
+    basique, mais cela reste une bonne illustration de mon niveau en front-end.
   </p>
   <img src="assets/pending.png" alt="Projet portfolio 1" class="project-img" />
 </section>
 
 <section class="project-section">
-  <h2>Autre projet</h2>
-  <h2>exemple de Projet</h2>
+  <h3>Autre projet</h3>
+  <h2>Exemple de projet</h2>
   <p class="project-text">
-    Projet de jeu en python MMORPG, path of the loner, un petit jeu ROGUE like permettant ou un aventurier de faire une partie one shot qui cumule xp / gold etc.
+    Projet de jeu en Python (MMORPG), *Path of the Loner*, un petit jeu rogue-like permettant à un aventurier
+    de faire une partie "one-shot", cumulant expérience, or, etc.
   </p>
   <img src="assets/pending.png" alt="Projet portfolio 2" class="project-img" />
 </section>
 
-
 <section class="tech-intro-section">
   <p class="tech-intro-text">
-    <span class="highlight">Actuellement</span> je serai à la recherche de nouvelle opportunités
-    afin de diversifier mes connaissances, expériences.
-    <span class="highlight">Soif de connaissance</span>,
-    je suis disposé à tenter de nouvelles technologies.
+    <span class="highlight">Actuellement</span>, je suis à la recherche de nouvelles opportunités
+    afin de diversifier mes connaissances et mes expériences.
+    <span class="highlight">Curieux et passionné</span>,
+    je suis prêt à explorer de nouvelles technologies.
   </p>
   <app-tech-icons></app-tech-icons>
 </section>
-
-
-
 
 <section class="contact-section">
   <app-contact-form></app-contact-form>

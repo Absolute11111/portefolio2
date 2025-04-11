@@ -7,7 +7,7 @@ $text: #eae6f5;
   display: block;
   background-color: $background;
   color: $text;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Baloo 2', sans-serif;
   padding: 0;
   margin: 0;
 }
@@ -91,28 +91,6 @@ $text: #eae6f5;
   }
 }
 
-// ✅ RESPONSIVE
-@media (max-width: 768px) {
-  .experience-cards {
-    flex-direction: column;
-    align-items: center;
-
-    app-experience-card {
-      width: 100%;
-      max-width: 90%;
-    }
-  }
-
-  .hero {
-    flex-direction: column;
-    text-align: center;
-
-    .hero-text {
-      text-align: center;
-    }
-  }
-}
-
 // ✅ PROJECT SECTION
 .project-section {
   display: flex;
@@ -130,6 +108,7 @@ $text: #eae6f5;
   h2, h3 {
     width: 100%;
     text-align: left;
+    font-family: 'Baloo 2', sans-serif;
   }
 
   h3 {
@@ -152,7 +131,7 @@ $text: #eae6f5;
     border-radius: 16px;
     padding: 1.8rem 2.2rem;
     color: $text;
-    font-size: 0.95rem;
+    font-size: 1rem;
     box-shadow: 0 0 30px rgba($primary, 0.3);
     line-height: 1.6;
     margin-right: 1rem;
@@ -170,8 +149,62 @@ $text: #eae6f5;
       transform: scale(1.03);
     }
   }
+}
 
-  @media (max-width: 768px) {
+// ✅ TECH INTRO
+.tech-intro-section {
+  text-align: center;
+  max-width: 980px;
+  margin: 5rem auto 3rem;
+  padding: 0 2rem;
+
+  .tech-intro-text {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: $text;
+    font-family: 'Baloo 2', sans-serif;
+    font-weight: 400;
+
+    .highlight {
+      color: $primary;
+      font-weight: 600;
+      font-size: 1.35rem;
+    }
+  }
+
+  .app-tech-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+}
+
+// ✅ RESPONSIVE
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+
+    .hero-text {
+      text-align: center;
+
+      .main-title {
+        font-size: 2rem;
+      }
+
+      .subtitle {
+        font-size: 1.2rem;
+      }
+
+      .alt-text,
+      .description {
+        font-size: 0.95rem;
+      }
+    }
+  }
+
+  .project-section {
     flex-direction: column;
 
     .project-text,
@@ -181,49 +214,58 @@ $text: #eae6f5;
     }
 
     .project-text {
+      font-size: 0.95rem;
       margin-bottom: 2rem;
     }
   }
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
+
+  .experience-cards {
+    flex-direction: column;
+    align-items: center;
+
+    app-experience-card {
+      width: 100%;
+      max-width: 90%;
     }
   }
-  
- // ✅ TECH INTRO RELOOKÉ
+}
 
+// ✅ GLOBAL FONT & STYLES
+body, html {
+  font-family: 'Baloo 2', sans-serif;
+  color: $text;
+  background-color: $background;
+  margin: 0;
+  padding: 0;
+}
 
+a {
+  color: $primary;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s;
 
+  &:hover {
+    color: lighten($primary, 10%);
   }
-  .tech-intro-section {
-    text-align: center;
-    max-width: 980px;
-    margin: 5rem auto 3rem;
-    padding: 0 2rem;
-  
-    .tech-intro-text {
-      font-size: 1.3rem;
-      line-height: 1.8;
-      color: $text;
-      font-family: 'Poppins', sans-serif;
-      font-weight: 400;
-  
-      .highlight {
-        color: $primary;
-        font-weight: 600;
-        font-size: 1.35rem;
-      }
-    }
-  
-    .app-tech-icons {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin-top: 1.5rem;
-    }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 2px;
+    background: $primary;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
   }
+
+  &:hover::after {
+    width: 100%;
+  }
+}
+
+.purpleSqli {
+  color: $primary;
+}
