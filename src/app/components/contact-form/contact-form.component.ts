@@ -15,13 +15,13 @@ export class ContactFormComponent {
     name: '',
     email: '',
     message: '',
-    honeypot: '' // champ invisible
+    honeypot: '' 
   };
 
   sendEmail() {
     if (this.formData.honeypot) {
       console.warn('Spam détecté, email non envoyé.');
-      return; // stop si le champ est rempli (robot)
+      return; 
     }
 
     const serviceID = 'service_dtcbuun';
@@ -31,7 +31,7 @@ export class ContactFormComponent {
     emailjs.send(serviceID, templateID, this.formData, userID)
       .then(() => {
         alert('✅ Email bien envoyé !');
-        this.formData = { name: '', email: '', message: '', honeypot: '' }; // reset form
+        this.formData = { name: '', email: '', message: '', honeypot: '' };
       }, (error) => {
         console.error('Erreur EmailJS:', error);
         alert('❌ Une erreur est survenue.');

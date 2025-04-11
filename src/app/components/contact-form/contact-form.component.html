@@ -1,8 +1,40 @@
-<form (ngSubmit)="sendEmail()" #contactForm="ngForm">
-  <input type="text" name="honeypot" [(ngModel)]="formData.honeypot" style="display: none;" tabindex="-1" autocomplete="off" />
+<form class="contact-form" (ngSubmit)="sendEmail()" #contactForm="ngForm">
+  <!-- Anti-spam -->
+  <input
+    type="text"
+    name="honeypot"
+    [(ngModel)]="formData.honeypot"
+    class="honeypot"
+    style="display: none;"
+    tabindex="-1"
+    autocomplete="off"
+  />
 
-  <input type="text" name="name" [(ngModel)]="formData.name" required placeholder="Nom" />
-  <input type="email" name="email" [(ngModel)]="formData.email" required placeholder="Email" />
-  <textarea name="message" [(ngModel)]="formData.message" required placeholder="Votre message"></textarea>
-  <button type="submit">Envoyer</button>
+  <input
+    type="text"
+    name="name"
+    [(ngModel)]="formData.name"
+    required
+    placeholder="Nom"
+    class="form-field"
+  />
+
+  <input
+    type="email"
+    name="email"
+    [(ngModel)]="formData.email"
+    required
+    placeholder="Email"
+    class="form-field"
+  />
+
+  <textarea
+    name="message"
+    [(ngModel)]="formData.message"
+    required
+    placeholder="Votre message"
+    class="form-field"
+  ></textarea>
+
+  <button type="submit" class="submit-btn">Envoyer</button>
 </form>
